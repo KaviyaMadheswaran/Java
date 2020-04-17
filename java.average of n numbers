@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Main
+{
+  public static void main(String[] args)
+  { 
+    int i,s=0,avg; 
+    Scanner sc=new Scanner(System.in); 
+    int n=sc.nextInt(); 
+    for(i=1;i<=n;i=i+1) 
+    { 
+      s=s+i; 
+    } 
+    avg=s/n; 
+    System.out.println(avg); 
+ }}
