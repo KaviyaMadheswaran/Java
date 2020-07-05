@@ -1,0 +1,26 @@
+//vowels and consonants present i a given string
+import java.util.Scanner;
+
+import javax.lang.model.util.ElementScanner6;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    char[] a=s.toCharArray();
+    String vow="";
+    String con="";
+    for(int i=0;i<s.length();i++)
+    {
+      if(a[i]=='a' || a[i]=='e' || a[i]=='i' || a[i]=='o' || a[i]=='u')
+      {
+        vow+=a[i];
+      }
+      else
+        con+=a[i];
+    }
+    System.out.println(vow);
+    System.out.println(con);
+  }
+}
