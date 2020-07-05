@@ -1,0 +1,21 @@
+import java.util.Scanner;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int c=0,a,t;
+    t=n;
+    while(n!=0)
+    {
+      a=n%10;
+      c+=(a*a*a);
+      n=n/10;
+    }
+    if(c==t)
+      System.out.println("Amstrong num");
+    else
+      System.out.println("Not a amstrong num");
+  }
+}
