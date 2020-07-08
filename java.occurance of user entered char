@@ -1,0 +1,21 @@
+//how many times user entered characters occur in a given string
+import java.util.Scanner;
+class Main
+{ 
+  public static void main(String[] args) 
+  { 
+    Scanner sc=new Scanner(System.in); 
+    System.out.println("enter string"); 
+    String n; n=sc.nextLine(); 
+    char[] a=n.toCharArray(); 
+    System.out.println("enter character"); 
+    char c=sc.next().charAt(0); 
+    int i,b=0; 
+    for(i=0;i<n.length();i++) 
+    { 
+      if(a[i]==c)
+       b=b+1; 
+    } 
+    System.out.println(b); 
+  }
+ }
