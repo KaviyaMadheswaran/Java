@@ -1,0 +1,32 @@
+Given a series whose even term creates a separate geometric series and odd term creates another geometric series.
+Write a program to generate such series.For example,1, 1, 2, 2, 4, 4, 8, 8, 16, 16,......
+
+import java.util.Scanner;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int odd=1;
+    int even=1;
+    if(n%2==0)
+    {
+      for(int i=4;i<n+1;i++)
+      {
+        if(i%2==0)
+          even*=2;
+      }
+      System.out.println(even);
+    }
+    else
+    {
+      for(int i=3;i<n+1;i++)
+      {
+        if(i%2!=0)
+          odd*=2;
+      }
+      System.out.println(odd);
+    }
+  }
+}
