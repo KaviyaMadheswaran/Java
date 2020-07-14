@@ -1,0 +1,47 @@
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    //substring 
+    String s1="";
+    for(int i=0;i<s.length()-2;i++)
+    {
+      s1+=s.substring(i,i+3)+" ";
+    }
+    String[] a=s1.split(" ");
+    //integer array to store ascii vcalue of first letter in each string before sorted
+    int[] ind1=new int[a.length];
+    //after sorted
+    int[] ind=new int[a.length];
+    for(int i=0;i<a.length;i++)
+    {
+      //1st letter of each string
+      String st=a[i];
+      //ascii value of each string 1st letter
+      int val=(int)st.charAt(0);
+      ind[i]=val;
+    }
+    //sort an array
+    for(int i=0;i<ind.length;i++)
+    {
+      for(int j=i+1;j<ind.length;j++)
+      {
+        if(ind[i]>ind[j])
+        {
+          int temp=ind[i];
+          ind[i]=ind[j];
+          ind[j]=temp;
+        }
+      }
+    }
+    //minimum substring value
+    int mini=ind[0];
+    //maximum substring value
+    int maxi=ind[ind.length-1];
+    System.out.println(s1.charAt(min
+
+  }
+}
