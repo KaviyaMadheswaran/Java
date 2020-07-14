@@ -1,4 +1,5 @@
-import java.util.*;
+#suubstring without using an array
+import java.util.Scanner;
 class Main
 {
   public static void main(String[] args)
@@ -41,7 +42,19 @@ class Main
     int mini=ind[0];
     //maximum substring value
     int maxi=ind[ind.length-1];
-    System.out.println(s1.charAt(min
-
+    //index of mini substring and maxi substring
+    int miniindex=0,maxiindex=0;
+    for(int i=0;i<ind1.length;i++)
+    {
+      if(ind[i]==mini)
+      {
+        miniindex+=i;
+      }
+      else if(ind[i]==maxi)
+      {
+        maxiindex+=i;
+      }
+    }
+    System.out.println(a[miniindex]+" "+a[maxiindex]);
   }
 }
