@@ -5,10 +5,11 @@ class Main
   public static void main(String[] args)
   {
     Scanner sc=new Scanner(System.in);
-    String s=sc.nextLine();
+    int n=sc.nextInt();
+    String s=sc.next();
     //substring 
     String s1="";
-    for(int i=0;i<s.length()-2;i++)
+    for(int i=0;i<s.length()-(n-1);i++)
     {
       s1+=s.substring(i,i+3)+" ";
     }
@@ -55,6 +56,6 @@ class Main
         maxiindex+=i;
       }
     }
-    System.out.println(a[miniindex]+" "+a[maxiindex]);
+    System.out.println(a[maxiindex]+"\n"+a[miniindex]);
   }
 }
