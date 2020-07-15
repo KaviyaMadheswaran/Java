@@ -1,0 +1,27 @@
+You are given a number A in Kilometers. Convert this into B: Meters and C: Centi-Metres.
+
+Input Description:
+A number "A" representing some distance in kilometer is provided to you as the input.
+
+Output Description:
+Convert and print this value in meters and centimeters.
+
+Sample Input :
+2
+Sample Output :
+2000
+200000
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    //kilometer to meter
+    System.out.println(a*1000);
+    //kilometer to centimeter
+    System.out.println(a*100000);
+
+  }
+}
