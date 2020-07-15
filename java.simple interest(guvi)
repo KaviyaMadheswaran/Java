@@ -1,0 +1,29 @@
+You are given with Principle amount($), Interest Rate(%) and Time (years) in that order. Find Simple Interest.
+
+Print the output up to two decimal places (Round-off if necessary).
+
+(S.I. = P*T*R/100)
+
+Input Description:
+Three values are given to you as the input. these values correspond to Principle amount, Interest Rate and Time in that particular order.
+
+Output Description:
+Find the Simple interest and print it up to two decimal places. Round off if required.
+
+Sample Input :
+1000 2 5
+Sample Output :
+100.00
+import java.util.Scanner;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int p=sc.nextInt();
+    int n=sc.nextInt();
+    int r=sc.nextInt();
+    double intrest=(p*n*r)/100;
+    System.out.printf("%.2f",intrest);
+  }
+}
