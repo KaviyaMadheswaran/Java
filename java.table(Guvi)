@@ -1,0 +1,52 @@
+Using the method of looping, write a program to print the table of 9 till N in the format as follows:
+(N is input by the user)
+
+9 18 27...
+
+Print NULL if 0 is input
+
+Input Description:
+A positive integer is provided as an input.
+
+Output Description:
+Print the table of nine with single space between the elements till the number that is input.
+
+Sample Input :
+3
+Sample Output :
+9 18 27
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int table=0;
+    String s="";
+    for(int i=1;i<n+1;i++)
+    {
+      table+=9;
+      s+=Integer.toString(table)+" ";
+    }
+    System.out.println(s);
+  
+  }
+}
+(or)
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    String s="";
+    for(int i=1;i<n+1;i++)
+    {
+      s+=Integer.toString(9*i)+" ";
+    }
+    System.out.println(s);
+  
+  }
+}
