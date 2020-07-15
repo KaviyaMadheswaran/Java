@@ -1,0 +1,33 @@
+Note: The output should be up to 2nd decimal place (round off if needed) and in case of a recurring decimal use braces i.e. for eg: 0.33333..... => 0.33.
+
+Note: Use Shri Dharacharya's Method to solve i.e. X = {-b + √(b² - 4ac) } / 2a & {-b-√(b² -4ac)} / 2a
+
+Input Description:
+Three numbers corresponding to the coefficients of x(squared), x and constant are given as an input in that particular order
+
+Output Description:
+Print the two values of X after rounding off to 2 decimal places if required.
+
+Sample Input :
+1 5 6
+Sample Output :
+-2.00
+-3.00
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int a=sc.nextInt();
+    int b=sc.nextInt();
+    int c=sc.nextInt();
+    double sq=Math.sqrt((b*b)-(4*a*c));
+    double ans=(-b+sq)/(2*a);
+    double ans1=(-b-sq)/(2*a);
+    System.out.printf("%.2f",ans);
+    System.out.print("\n");
+    System.out.printf("%.2f",ans1);
+  
+  }
+}
