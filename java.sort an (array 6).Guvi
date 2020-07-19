@@ -1,0 +1,76 @@
+You are given with two arrays. Your task is to merge the array such that first array is in ascending order and second one in descending order.
+
+Input Description:
+First line contains two integer ‘n’ and ‘m’. ‘n’ denotes length of array 1 and ‘m’ of array 2.Next line contains n space separated numbers and third line contains ‘m’ space separated numbers
+
+Output Description:
+Print a single array in desired order
+
+Sample Input :
+3 3
+23 15 16
+357 65 10
+Sample Output :
+15 16 23 357 65 10
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    String s1=sc.nextLine();
+    String s2=sc.nextLine();
+    String[] b=s1.split(" ");
+    //convert string value to ineteger array
+    int[] arr1=new int[b.length];
+    for(int i=0;i<b.length;i++)
+    {
+        arr1[i]=Integer.parseInt(b[i]);
+    }
+    String[] c=s2.split(" ");
+    int[] arr2=new int[c.length];
+    for(int j=0;j<c.length;j++)
+    {
+      arr2[j]=Integer.parseInt(c[j]);
+    }
+    int temp;
+    //sor an array into ascending order
+    for(int i=0;i<arr1.length;i++)
+    {
+      for(int j=i+1;j<arr1.length;j++)
+      {
+        if(arr1[i]>arr1[j])
+        {
+          temp=arr1[i];
+          arr1[i]=arr1[j];
+          arr1[j]=temp;
+        }
+      }
+    }
+    //sort an array into to descending order
+    for(int i=0;i<arr2.length;i++)
+    {
+      for(int j=i+1;j<arr2.length;j++)
+      {
+        if(arr2[i]<arr2[j])
+        {
+          temp=arr2[i];
+          arr2[i]=arr2[j];
+          arr2[j]=arr2[i];
+        }
+      }
+    }
+    String ans="";
+    for(int i:arr1)
+    {
+      ans+=Integer.toString(i)+" ";
+    }
+    for(int j:arr2)
+    {
+      ans+=Integer.toString(j)+" ";
+    }
+    System.out.println(ans);
+
+  }
+}
