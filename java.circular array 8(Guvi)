@@ -1,0 +1,93 @@
+You are given with an circular array .Your task is calculate the difference between two consecutive number. And if difference is greater than ‘k’, print 1 else print 0
+
+Input Description:
+You are given two numbers ‘n’, ’m’. Next line contains n space separated integers.
+
+Output Description:
+Print 1 if the difference is greater than ‘m’.
+
+Sample Input :
+5 15
+50 65 85 98 35
+Sample Output :
+0 1 0 1 0
+import java.util.*;
+ class Main
+ {
+   public static void main(String[] args)
+   {
+     Scanner sc=new Scanner(System.in);
+     String n=sc.nextLine();
+     //split string n into string array with spaces
+     String[] k=n.split(" ");
+     //get m value i  string and convert into integer from string
+     int m=Integer.valueOf(k[1]);
+     String a=sc.nextLine();
+     String[] arr=a.split(" ");
+     //convert string input into integer
+     int[] inti=new int[arr.length];
+     for(int i=0;i<arr.length;i++)
+     {
+       inti[i]=Integer.valueOf(arr[i]);
+     }
+     int[] val=new int[inti.length];
+     int diff;
+     for(int i=0;i<(inti.length)-1;i++)
+     {
+       if(inti[i]>inti[i+1])
+       {
+         diff=inti[i]-inti[i+1];
+         if(diff>m)
+         {
+           val[i]=1;
+         }
+         else
+         {
+           val[i]=0;
+         }
+       }
+       else
+       {
+         diff=inti[i+1]-inti[i];
+         if(diff>m)
+         {
+           val[i]=1;
+         }
+         else
+         {
+           val[i]=0;
+         }
+       }
+     }
+     if(inti[0]>inti[inti.length-1])
+     {
+       diff=inti[0]-inti[inti.length-1];
+       if(diff>m)
+       {
+         val[inti.length-1]=1;
+       }
+       else
+       {
+         val[inti.length-1]=0;
+       }
+     }
+     else
+     {
+       diff=inti[inti.length-1]-inti[0];
+       if(diff>m)
+       {
+         val[inti.length-1]=1;
+       }
+       else
+       {
+         val[inti.length-1]=0;
+       }
+     }
+     String ans="";
+     for(int i:val)
+     {
+       ans+=Integer.toString(i)+" ";
+     }
+     System.out.println(ans);
+   }
+ }
