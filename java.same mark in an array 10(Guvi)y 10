@@ -1,0 +1,41 @@
+Ramesh is a student and wants to find out if there is any other student in his class who has got the same marks as his, in maths. Help him to find out.
+ 
+
+Input Description:
+First line contains the number of students in the class followed by Ramesh’s mark. Second line contains the marks of all students in the class.
+
+Output Description:
+Index of student who got mark same as Ramesh’s mark. If no such mark exists, return -1.
+
+Sample Input :
+2 10
+1 2
+Sample Output :
+-1
+import java.util.Scanner;
+ class Main
+ {
+   public static void main(String[] args)
+   {
+     Scanner sc=new Scanner(System.in);
+     String s=sc.nextLine();
+     String a=sc.nextLine();
+     String[] s1=a.split(" ");
+     int c=0;
+     for(int i=0;i<s1.length;i++)
+     {
+       for(int j=i+1;j<s1.length;j++)
+       {
+         if(s1[i].equals(s1[j]))
+         {
+           c+=1;
+           System.out.println(j);
+         }
+       }
+     }
+     if(c==0)
+     {
+       System.out.println(-1);
+     }
+   }
+ }
