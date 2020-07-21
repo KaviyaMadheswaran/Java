@@ -1,0 +1,32 @@
+You are given a number with duplicate digits your task is to remove the immediate duplicate digits and print the result
+
+Input Description:
+You are given a long string of digits
+
+Output Description:
+Print the desired result print -1 if result length is 0
+
+Sample Input :
+1331
+Sample Output :
+11
+import java.util.Scanner;
+ class Main
+ {
+   public static void main(String[] args)
+   {
+     Scanner sc=new Scanner(System.in);
+     String s=sc.nextLine();
+     for(int i=0;i<s.length()-1;i++)
+     {
+       char c=s.charAt(i);
+       char d=s.charAt(i+1);
+       if(c==d)
+       {
+         s=s.replace(Character.toString(c),"");
+         s=s.replace(Character.toString(d),"");
+       }
+     }
+     System.out.println(s);
+   }
+ }
