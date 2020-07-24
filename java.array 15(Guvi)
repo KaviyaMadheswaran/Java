@@ -1,0 +1,52 @@
+You are given with an array of numbers, Your task is to print the difference of indices of largest and smallest number.All number are unique.
+
+Input Description:
+First line contains a number ‘n’. Then next line contains n space separated numbers.
+
+Output Description:
+Print the difference of indices of largest and smallest array
+
+Sample Input :
+5
+1 6 4 0 3
+Sample Output :
+-2
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String n=sc.nextLine();
+    String s=sc.nextLine();
+    String[] arr=s.split(" ");
+    int[] a=new int[arr.length];
+    for(int i=0;i<arr.length;i++)
+    {
+      a[i]=Integer.parseInt(arr[i]);
+    }
+    int largest=a[0];
+    int lind=0;
+    int smallest=a[0];
+    int sind=0;
+    for(int i=1;i<a.length;i++)
+    {
+      if(a[i]>largest)
+      {
+        largest=a[i];
+        lind=i;
+      }
+    }
+    for(int i=1;i<a.length;i++)
+    {
+      if(a[i]<smallest)
+      {
+        smallest=a[i];
+        sind=i;
+      }
+    }
+    System.out.println(lind-sind);
+    
+    
+  }
+}
