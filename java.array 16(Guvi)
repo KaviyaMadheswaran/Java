@@ -1,0 +1,78 @@
+You are a software engineer at an MNC. You are given the task of sorting the employees in your company based on their salary. Perform the task so that the employees, including yourself, will get a bonus from the management.
+
+CONSTRAINT:
+
+0<=salary<=1000000
+
+ 
+
+Input Description:
+Number of employees followed by their name and salary
+
+Output Description:
+Sorted list of employee names
+
+Sample Input :
+3
+Karthik 23000 rohan 81734 varshini 12343
+Sample Output :
+varshini
+Karthik
+Rohan
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    String[] arr=s.split(" ");
+    //integer array to store intgere value
+    int[] inti=new int[arr.length/2];
+    //finally to find out the index value
+    int[] index=new int[arr.length/2];
+    int in=0;
+    //String array to store string value
+    String[] str=new String[arr.length/2];
+    int st=0;
+    for(int i=0;i<arr.length;i++)
+    {
+      if(arr[i].matches("[0-9]+"))
+      {
+        inti[in]=Integer.parseInt(arr[i]);
+        index[in]=Integer.parseInt(arr[i]);
+        in+=1;
+      }
+      else
+      {
+        str[st]=arr[i];
+        st+=1;
+      }
+    }
+    int temp;
+    for(int i=0;i<inti.length;i++)
+    {
+      for(int j=i+1;j<inti.length;j++)
+      {
+        if(inti[i]>inti[j])
+        {
+          temp=inti[i];
+          inti[i]=inti[j];
+          inti[j]=temp;
+        }
+      }
+    }
+    //loop for sorted integer array
+    for(int k=0;k<inti.length;k++)
+    {
+      //loop for original integer index array
+      for(int l=0;l<index.length;l++)
+      {
+        if(inti[k]==index[l])
+        {
+          System.out.println(str[l]);
+        }
+      }
+    }   
+  }
+}
