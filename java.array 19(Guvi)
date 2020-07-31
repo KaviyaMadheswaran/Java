@@ -1,0 +1,70 @@
+Loki wants to steal the tesseract but in order to do so, he has to rearrange the elements in an array in a specific manner which is mentioned in a clue. The clue says ‘cursed are the odd and sorted are the even’. Loki manages to decode the clue which translates to “sort the even positioned elements of an array, starting from the element at index 0, in ascending order”. Manipulate the array so as to help Loki steal the tesseract.
+ 
+
+Input Description:
+Size of the array followed by the elements of the array
+
+Output Description:
+Even index array elements sorted in ascending order
+
+Sample Input :
+5
+3 9 1 44 6
+Sample Output :
+1 9 3 44 6
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String n=sc.nextLine();
+    String s=sc.nextLine();
+    String[] a=s.split(" ");
+    int[] arr=new int[a.length];
+    for(int i=0;i<a.length;i++)
+    {
+      arr[i]=Integer.parseInt(a[i]);
+    }
+    int count=0;
+    //even numbers in an given array
+    int[] even=new int[arr.length/2+1];
+    for(int j=0;j<arr.length;j++)
+    {
+      if(j%2==0)
+      {
+        even[count]=arr[j];
+        count+=1;
+      }
+    }
+    int temp;
+    for(int i=0;i<even.length;i++)
+    {
+      for(int j=i+1;j<even.length;j++)
+      {
+        if(even[i]>even[j])
+        {
+          temp=even[i];
+          even[i]=even[j];
+          even[j]=temp;
+        }
+      }
+    }
+    int c1=0;
+    for(int k=0;k<arr.length;k++)
+    {
+      if(k%2==0)
+      {
+        arr[k]=even[c1];
+        c1+=1;
+      }
+    }
+    String ans="";
+    for(int i: arr)
+    {
+      ans+=Integer.toString(i)+" ";
+    }
+    System.out.println(ans);
+    
+  }
+}
