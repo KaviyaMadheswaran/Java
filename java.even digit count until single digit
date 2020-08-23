@@ -1,0 +1,41 @@
+//count all even digit in the given number until it reaces a single digit
+import java.util.Scanner;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int input1=sc.nextInt();
+    int n=input1;
+		int sum=0;
+    if(input1<0)
+    {
+      n=~(input1-1);
+    }
+    while(n>0 || sum>9)
+    {
+        if(n==0)
+        {
+          n=sum;
+          sum=0;
+        }
+        while(n!=0)
+        {
+          int a=n%10;
+          if(a%2==0)
+          {
+            sum+=a;
+          }
+          n/=10;
+        }
+    }
+    if(input1<0)
+    {
+      System.out.println(~(sum-1));
+    }
+    else
+    {
+      System.out.println(sum);
+    }
+}
+}
