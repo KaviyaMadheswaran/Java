@@ -1,0 +1,71 @@
+//can form a palindrom with a given input numbers
+import java.util.*;
+class Main
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int n1=n;
+    String s=Integer.toString(n);
+    //each digit from a given number
+    int[] arr=new int[s.length()];
+    for(int i=0;i<s.length();i++)
+    {
+      arr[i]=Character.getNumericValue(s.charAt(i));
+    }
+    //unique digit
+    ArrayList<Integer> l=new ArrayList<Integer>();
+    l.add(arr[0]);
+    for(int i: arr)
+    {
+      int c=0;
+      for(int j: l)
+      {
+        if(i==j)
+          c+=1;
+      }
+      if(c==0)
+      {
+        l.add(i);
+      }
+    }
+    //count of uni digit
+    ArrayList<Integer> count=new ArrayList<Integer>();
+    for(int i: l)
+    {
+      int c=0;
+      for(int j: arr)
+      {
+        if(i==j)
+        {
+          c+=1;
+        }
+      }
+      count.add(c);
+    }
+    int odd=0;
+    int even=0;
+    for(int i: count)
+    {
+      if(i==1)
+        odd+=1;
+      else
+        even+=1;
+    }
+    if(s.length()%2==0)
+    {
+      if(odd==0)
+        System.out.println("Form palindrome");
+      else
+        System.out.println("Not palindrome"); 
+    }
+    else 
+    {
+      if(odd==1)
+        System.out.println("form palindrome");
+      else
+        System.out.println("Not palindrome");
+    }
+      }
+    }
