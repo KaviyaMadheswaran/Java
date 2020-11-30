@@ -1,0 +1,12 @@
+//write a program to initialize an integer array with ascii values and print the corresponding character values in a single row
+class arrayfour
+{
+	public static void main(String[] args)
+	{
+		int[] arr={97,100,65,117,77,82};
+		for(int i: arr)
+		{
+			System.out.print((char)i+" ");
+		}
+	}
+}
