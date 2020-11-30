@@ -1,0 +1,33 @@
+//write a program to find the largest 2 numbers and smallest 2 numbers in an given array
+import java.util.*;
+class arrayfive
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+String s=sc.nextLine();
+String[] sar=s.split(" ");
+int[] arr=new int[sar.length];
+int temp;
+for(int i=0;i<sar.length;i++)
+{
+arr[i]=Integer.parseInt(sar[i]);
+}
+for(int i=0;i<arr.length;i++)
+{
+for(int j=i+1;j<arr.length;j++)
+{
+	if(arr[i]>arr[j])
+	{
+		temp=arr[i];
+		arr[i]=arr[j];
+		arr[j]=temp;
+	}
+}
+}
+int len=arr.length;
+System.out.println("Largest two numbers are "+arr[len-1]+" "+"and"+" "+arr[len-2]);
+System.out.println("smallest two numbers are "+arr[0]+" "+"and"+" "+arr[1]);
+
+}
+}
