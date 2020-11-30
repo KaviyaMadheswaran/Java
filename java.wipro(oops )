@@ -1,0 +1,27 @@
+//to find volume of a box
+import java.util.*;
+class Box
+{
+int width;
+int height;
+int depth;
+int volume(int w,int h, int d)
+{
+width=w;
+height=h;
+depth=d;
+return w*h*d;
+}
+}
+class Main
+{
+public static void main(String[] args)
+{
+Scanner sc=new Scanner(System.in);
+int a=sc.nextInt();
+int b=sc.nextInt();
+int c=sc.nextInt();
+Box ob=new Box();
+System.out.println(ob.volume(a,b,c));
+}
+}
