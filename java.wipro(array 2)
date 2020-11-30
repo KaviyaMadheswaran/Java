@@ -1,0 +1,23 @@
+//write a program to initialize an integer array and fina the minimum and maximum value
+class arraytwo
+{
+	public static void main(String[] args)
+	{
+		int[] arr={7,2,17,4,3,6};
+		int maxi=arr[0];
+		int mini=arr[0];
+		for(int i=1;i<arr.length;i++)
+		{
+			if(maxi<arr[i])
+			{
+				maxi=arr[i];
+			}
+			if(mini>arr[i])
+			{
+				mini=arr[i];
+			}
+		}
+		System.out.println("Maximum value is"+" "+maxi);
+		System.out.println("Minimum value is"+" "+mini);
+	}
+}
