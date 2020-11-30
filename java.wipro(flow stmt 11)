@@ -1,0 +1,16 @@
+//write a program to print the even numbers between the given range 23 and 57
+import java.util.Scanner;
+class floweleven
+{
+public static void main(String[] args)
+{
+	Scanner sc=new Scanner(System.in);
+	for(int i=23;i<57;i++)
+	{
+	if(i%2==0)
+	{
+		System.out.println(i);
+	}
+	}
+}
+}
