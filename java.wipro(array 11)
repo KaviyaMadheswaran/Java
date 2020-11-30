@@ -1,0 +1,31 @@
+//print "true" if the integer present in an given array contains only 1 or 4 otherwise print "false"
+import java.util.*;
+class arrayeleven
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    int n=sc.nextInt();
+    int[] arr=new int[n];
+    for(int i=0;i<n;i++)
+    {
+      arr[i]=sc.nextInt();
+    }
+    int c=0;
+    for(int i: arr)
+    {
+      if(i==1 || i==4)
+      {
+        c+=1;
+      }
+    }
+    if(c==n)
+    {
+      System.out.println("true");
+    }
+    else
+    {
+      System.out.println("false");
+    }
+  }
+}
