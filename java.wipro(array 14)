@@ -1,0 +1,33 @@
+//print the biggest element in  the given 3*3 array
+class arrayfourteen
+{
+public static void main(String[] args)
+{
+if(args.length<9)
+{
+System.out.println("Please enter 9 integer numbers");
+}
+else
+{
+int[] arr=new int[9];
+for(int i=0;i<9;i++)
+{
+arr[i]=Integer.parseInt(args[i]);
+}
+int large=arr[0];
+for(int j=1;j<arr.length;j++)
+{
+if(large<arr[j])
+{
+large=arr[j];
+}
+}
+}
+/*System.out.println("The given array is :");
+System.out.println(args[0]+" "+args[1]+" "+args[2]);
+System.out.println(args[3]+" "+args[4]+" "+args[5]);
+System.out.println(args[6]+" "+args[7]+" "+args[8]);
+System.out.println("The biggest number in the given array is "+ large);*/
+}
+}
+
