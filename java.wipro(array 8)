@@ -1,0 +1,40 @@
+//write a program to print the sum of elements of an array following given conditions
+import java.util.Scanner;
+class arrayeight
+{
+  public static void main(String[] args)
+  {
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    String[] s1=s.split(",");
+    int[] arr=new int[s1.length];
+    for(int i=0;i<s1.length;i++)
+    {
+      arr[i]=Integer.parseInt(s1[i]);
+    }
+    int sixindex=0;
+    int sevenindex=0;
+    //to get an index of numer 6 and 7
+    for(int j=0;j<arr.length;j++)
+    {
+      if(arr[j]==6)
+        sixindex+=j;
+      else if(arr[j]==7)
+        sevenindex+=j;
+    }
+    int sum=0;
+    if(sixindex<sevenindex)
+    {
+      for(int i=0;i<sixindex;i++)
+        sum+=arr[i];
+      for(int j=sevenindex+1;j<arr.length;j++)
+        sum+=arr[j];
+    }
+    else
+    {
+      for(int i: arr)
+        sum+=i;
+    }
+    System.out.println(sum);
+  }
+}
