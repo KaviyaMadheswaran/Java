@@ -1,0 +1,17 @@
+//write a program to initialize an integer array and print the sum and average of the array
+class arrayone
+{
+	public static void main(String[] args)
+	{
+		int[] arr={1,2,3,4,5,6,7};
+		int sum=0;
+		for(int i: arr)
+		{
+			sum+=i;
+		}
+		int len=arr.length;
+		int avg=sum/len;
+		System.out.println("sum is"+" "+sum);
+		System.out.println("average is"+" "+avg);
+	}
+}
