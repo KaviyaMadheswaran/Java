@@ -1,0 +1,25 @@
+import java.util.Scanner;
+abstract class Animal
+{  
+public abstract void animalsound();  
+public void sleep()  
+{    
+System.out.println("zzz");  
+}
+}
+class Pig extends Animal
+{  
+public void animalsound() 
+{   
+System.out.println("Wee Wee"); 
+}
+}
+class Main
+{  
+public static void main(String[] args)  
+{    
+Pig ob=new Pig();    
+ob.animalsound();    
+ob.sleep();  
+}
+}
