@@ -1,0 +1,15 @@
+import java.util.Scanner;
+class Main
+{ 
+    public static void main(String[] args)
+    { 
+        Scanner sc=new Scanner(System.in); 
+        String n=sc.next(); 
+        int a=n.length(); 
+        int i=0; 
+        for(int j=a;j<=a;j--) 
+        { 
+            System.out.println(n.substring(i,j));
+        }
+    }
+}
