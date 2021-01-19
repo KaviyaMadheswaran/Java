@@ -1,0 +1,16 @@
+#subtring(computer ..c/co/com....)
+import java.util.Scanner;
+class Main
+{ 
+    public static void main(String[] args)
+    { 
+        Scanner sc=new Scanner(System.in); 
+        String n=sc.nextLine(); 
+        int i=0,j=1; 
+        for(j=1;j<=n.length();j++)
+        { 
+            System.out.println(n.substring(i,j));
+            System.out.println();
+        }
+    }
+} 
