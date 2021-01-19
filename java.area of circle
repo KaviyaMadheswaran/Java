@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.lang.Math;
+class Main
+{  
+public static void main(String[] args)  
+{    
+Scanner sc=new Scanner(System.in);    
+double r=sc.nextDouble();    
+double d=Math.PI;    
+double b=d*r*r;    
+System.out.println(b); 
+}
+}
