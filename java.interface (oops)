@@ -1,0 +1,26 @@
+import java.util.Scanner;
+interface Animal
+{  
+public void animalsound();  
+public void sleep();
+}
+class Pig implements Animal
+{  
+public void animalsound()  
+{    
+System.out.println("wee wee");  
+}  
+public void sleep()  
+{    
+System.out.println("zzz");  
+}
+}
+class Main
+{  
+public static void main(String[] args)  
+{    
+Pig ob=new Pig();    
+ob.animalsound();    
+ob.sleep();  
+}
+}
