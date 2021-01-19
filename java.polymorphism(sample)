@@ -1,0 +1,17 @@
+import java.util.Scanner;
+class Main
+{  
+public void Student(int r,String n)  
+{   
+System.out.println(r+" "+n);  
+}
+public static void main(String[] args)
+{
+Main x=new Main();
+Scanner sc=new Scanner(System.in);
+System.out.println("enter inputs");
+int r=sc.nextInt();
+String n=sc.nextLine();
+x.Student(r,n);
+}
+}
