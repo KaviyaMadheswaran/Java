@@ -1,0 +1,20 @@
+import java.util.Scanner;
+class Main
+{  
+private int a=2;  
+private String b="Mahi";    
+public void changevalue(int x,String y)    
+{      
+a=x;      
+b=y;      
+System.out.println(a+" "+b);    
+}  
+public static void main(String[] args)  
+{    
+Main ob=new Main();    
+Scanner sc=new Scanner(System.in);    
+int x=sc.nextInt();    
+String y=sc.nextLine();    
+ob.changevalue(x,y);  
+}
+}
