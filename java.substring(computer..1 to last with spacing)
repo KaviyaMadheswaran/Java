@@ -1,0 +1,25 @@
+import java.util.Scanner;
+
+class Main{ public static void main(String[] args)
+{ 
+    Scanner sc=new Scanner(System.in); 
+    String n=sc.nextLine(); 
+    int i=0,j=1;
+    int le=n.length(); 
+    for(int m=1;m<=n.length();m++) 
+    { 
+        for(int k=le;k>=m;k--) 
+        { 
+            System.out.print(" ");
+        } 
+        if(j<=n.length()) 
+        { 
+            System.out.println(n.substring(i,j)); j++;
+        } 
+    } 
+    System.out.println();
+} 
+}
+ 
+
+ 
