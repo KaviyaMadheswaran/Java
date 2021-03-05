@@ -1,0 +1,32 @@
+Problem Statement
+Write a Java program to print the unique characters present in the given string in the same sequence as they appear(the first occurrence) in the input.
+
+Condition
+All the characters should be in lowercase only.
+
+Input
+xperience
+Output
+xperinc
+SOLUTION:
+import java.util.*;
+class Main {  
+  public static void main(String args[]) { 
+    Scanner sc=new Scanner(System.in);
+    String s=sc.nextLine();
+    String st="";
+    int c=0;
+    for(int i=0;i<s.length();i++)
+      {
+        if(st.contains(Character.toString(s.charAt(i))))
+        {
+          c+=1;
+        }
+        else
+        {
+          st+=s.charAt(i);
+        }
+      }
+    System.out.println(st);
+  } 
+}
