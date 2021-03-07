@@ -1,0 +1,16 @@
+import java.util.*;
+import java.io.*;
+class Main
+  {
+    public static void main(String[] args)
+    throws Exception
+    {
+      InputStreamReader r=new InputStreamReader(System.in);
+      BufferedReader br=new BufferedReader(r);
+      String s=br.readLine();
+      for(int i=0;i<s.length();i++)
+        {
+          System.out.println(s.charAt(i));
+        }
+      }
+  }
